@@ -1,0 +1,32 @@
+//D -->Declare a boolean to serve as a "switch" for the paragraph to display and undisplay when button is clicked
+let showSecret = false;
+// --> 1)  Declare a button variable to add an event listener
+secretButton.addEventListener("click", toggleSecretState )
+updateSecretParagraph();
+
+// --> 2)  Write the toggleSecretState code containing the core actions
+function toggleSecretState(){
+  showSecret != showSecret;
+  updateSecretParagraph();
+  updateSecretButton();
+}
+/** 3) declare button and turn it to display block intead of none. */
+updateSecretButton(){
+  if(showSecret){
+    myButton.textContent = "secret revealed"
+  }else{
+    myButton.textContent = "secret hidden"
+  }
+}
+
+
+/** 2) A first working Express Server */
+updateParagraph(){
+  if(showSecret){
+    secretParagraph.style.display = "block"
+  }else{
+    secretParagraph.style.display = "none"
+  }
+}
+
+ 
